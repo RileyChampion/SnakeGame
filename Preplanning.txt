@@ -1,0 +1,43 @@
+So I want to make a snake like game using:
+	-pygame
+	-classes
+	-Game loop
+	-key presses
+
+How many modules?
+	-One for the game loop
+	-One for drawing the board
+	-One for creating the game logic
+	-One for the snake class
+
+Game loop
+	-Begin the initial loop
+	-Have a game clock
+	-Update the current event
+		-Either move forward
+		-Change a legal direction (left or right)
+		-Eat apple = grow
+		-hit wall or tail = game over
+
+Drawing game board
+	-20x20 array
+		-H = head
+		-T = Tail
+	-translate to pixels
+	-Apples = Color red, placed randomly
+	-Head,Tail = Color Green
+
+Snake Class
+	-Initialize
+		-Start(length = 2)
+		-One Head, one tail
+		-For simplicity, place the snake in the same spot
+			-Tail = (10,2), Head = (10,3)
+		-Keep track of where the head is and where the tail is
+	-Eat apple = grow
+		-Now what does this mean?
+			-So from the head, the tail increases from the one behind to the one at the very end
+	-Move left or right
+		-turn body
+	-Check if hit self or wall
+		-This would trigger game over
