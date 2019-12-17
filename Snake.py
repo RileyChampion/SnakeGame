@@ -1,42 +1,50 @@
 #This is the module for the Snake Class
 
-class Snake(object):
+class snake(object):
 	"""docstring for Snake"""
 	def __init__(self):
-		super(Snake, self).__init__()
+		super(snake, self).__init__()
 		self.head = [10,3]
 		self.tail = [10,2]
-		self._length_of_snake = 2
+		self._length = 2
 		self.snake_array = [self.tail,self.head]
-		self._direction = "west"
+		self._direction = "east"
 
 	def moveForward(self):
-		if direction == "north":
-			#.. 
-		elif direction == "south":
-			#..
-		elif direction == "east":
-			#..
-		elif direction == "west":
-			#..
+		newHead = self.snake_array[self._length - 1][:]
+		if self._direction == "north":
+			newHead[0] -= 1
+		elif self._direction == "south":
+			newHead[0] += 1
+		elif self._direction == "east":
+			newHead[1] += 1
+		elif self._direction == "west":
+			newHead[1] -= 1
+		self.snake_array.append(newHead)
+		self.snake_array = self.snake_array[1:]
+		self.head = newHead
+		self.tail = self.snake_array[0]
+		
 	#moveLeft
 	def moveLeft(self):
-		if direction == "north":
+		if self._direction == "north":
 			self._direction = "west"
-		elif direction == "south":
+		elif self._direction == "south":
 			self._direction = "east"
-		elif direction == "east":
+		elif self._direction == "east":
 			self._direction = "north"
-		elif direction == "west":
+		elif self._direction == "west":
 			self._direction = "south"
+
 	#moveRight
 	def moveRight(self):
-		if direction == "north":
+		if self._direction == "north":
 			self._direction = "east"
-		elif direction == "south":
+		elif self._direction == "south":
 			self._direction = "west"
-		elif direction == "east":
+		elif self._direction == "east":
 			self._direction = "south"
-		elif direction == "west":
+		elif self._direction == "west":
 			self._direction = "north"
+	
 	#eatApple

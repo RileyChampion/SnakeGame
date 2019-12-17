@@ -20,7 +20,7 @@ Game loop
 		-hit wall or tail = game over
 
 Drawing game board
-	-20x20 array
+	-15x15 array
 		-H = head
 		-T = Tail
 	-translate to pixels
