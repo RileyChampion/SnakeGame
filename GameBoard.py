@@ -1,34 +1,39 @@
-#import Snake
+from Snake import snake
 
 class gameboard(object):
 	"""docstring for gameboard"""
-	def __init__(self, newSnake):
+	def __init__(self):
 		super(gameboard, self).__init__()
 		self.gameboard = [[" " for _ in range(15)] for _ in range(15)] #create a 15 x 15 gameboard
-		self.snake = newSnake
+		self._new_snake = snake()
 
-		for location in snake.snake_array:
-			gameboard[location[0]][location[1]] = "S"
+		for location in self._new_snake.snake_array[:]:
+			self.gameboard[location[0]][location[1]] = "S"
 
-	def _clearGameBoard(self):
+	def _clear_game_board(self) -> None:
 		self.gameboard = [[" " for _ in range(15)] for _ in range(15)]
 
-	def _updateGameBoard(self):
-		self._clearGameBoard()
+	def _update_game_board(self) -> None:
+		self._clear_game_board()
 
-		for location in snake.snake_array:
-			gameboard[location[0]][location[1]] = "S"
+		for location in self._new_snake.snake_array:
+			self.gameboard[location[0]][location[1]] = "S"
 
-	def turnSnakeLeft(self):
-		newSnake.moveLeft()
+	def turn_snake_left(self) -> None:
+		self._new_snake.moveLeft()
 
-	def turnSnakeRight(self) -> None:
-		newSnake.moveRight()
+	def turn_snake_right(self) -> None:
+		self._new_snake.moveRight()
 
-	def moveSnakeForward(self) -> None:
-		if 
+	def move_snake_forward(self) -> None:
+		self._new_snake.moveSnakeForward()
+		self._update_game_board()
+
+		# if self._new_snake.head == self._apple_location:
+
 
 	def _check_for_apple(self) -> bool:
+		return True
 
 
 
