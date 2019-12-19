@@ -39,13 +39,13 @@ class snake(object):
 		
 	#moveLeft
 	def moveLeft(self) -> None:
-		if self._direction != "west" and self._direction != "east":
-			self._direction = "east"
+		if self._direction != "east" and self._direction != "west":
+			self._direction = "west"
 
 	#moveRight
 	def moveRight(self) -> None:
-		if self._direction != "east" and self._direction != "west":
-			self._direction = "west"
+		if self._direction != "west" and self._direction != "east":
+			self._direction = "east"
 	
 	#eatApple
 	def eatApple(self) -> None:

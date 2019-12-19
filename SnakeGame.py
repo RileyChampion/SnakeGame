@@ -79,9 +79,9 @@ class SnakeGame(object):
 		for row in range(15):
 			for col in range(15):
 				if gameBoard[row][col] == "A":
-					pygame.draw.rect(self._surface, (242,78,78), self._frac_to_pixel(self._game_play.frac_proportions(row, col)))
+					pygame.draw.rect(self._surface, (242,78,78), self._frac_to_pixel(self._game_play.frac_proportions(col, row)))
 				elif gameBoard[row][col] == "S":
-					pygame.draw.rect(self._surface, (58,232,64), self._frac_to_pixel(self._game_play.frac_proportions(row, col)))
+					pygame.draw.rect(self._surface, (58,232,64), self._frac_to_pixel(self._game_play.frac_proportions(col, row)))
 
 
 	def _frac_to_pixel(self, fracTuple: (float)) -> (int, int, int, int):
