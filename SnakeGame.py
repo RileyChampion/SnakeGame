@@ -1,6 +1,7 @@
 #This is for snake game loop.
 
 import pygame
+import gameboard
 
 class SnakeGame(object):
 	"""docstring for SnakeGame"""

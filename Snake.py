@@ -49,5 +49,5 @@ class snake(object):
 	
 	#eatApple
 	def eatApple(self) -> None:
-		self.snake_array = self._prev_tail + self.snake_array
+		self.snake_array = [self._prev_tail] + self.snake_array
 		self._length += 1
