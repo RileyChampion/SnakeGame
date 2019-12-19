@@ -22,7 +22,7 @@ class gameboard(object):
 
 	def _update_game_board(self) -> None:
 		self._clear_game_board()
-		
+
 		for location in self._new_snake.snake_array:
 			self.gameboard[location[0]][location[1]] = "S"
 
@@ -58,3 +58,19 @@ class gameboard(object):
 			self._apple_location = [randint(0,14),randint(0,14)]
 			if self._apple_location not in self._new_snake.snake_array:
 				break
+
+	def check_game_over(self) -> bool:
+		if self._new_snake.snake_array(self._new_snake.head) > 1:
+			return True
+		elif self._new_snake.head[0] in [0,14] or self._new_snake.head[1] in [0,14]:
+			return True
+		else:
+			return False
+
+	def frac_proportions(self, row:int, col:int) -> (float, float, float, float):
+		x_frac_cord = (row/15)
+		y_frac_cord = (col/15)
+		x_width = (1 / 15)
+		y_width =  (1 / 15)
+
+		return (x_frac_cord, y_frac_cord, x_width, y_width)
