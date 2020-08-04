@@ -38,7 +38,7 @@ py SnakeGame.py
 
 Here's a walkthrough of implemented user stories:
 
-<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='Snake.gif' title='Snake GIF' width='' alt='Snake GIF' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
