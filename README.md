@@ -5,7 +5,7 @@
 ## Technologies
 
 * Language: Python
-* Libraries: PyGame(https://www.pygame.org/wiki/GettingStarted), unittest
+* Libraries: [PyGame](https://www.pygame.org/wiki/GettingStarted), unittest
 
 ## User Stories
 
